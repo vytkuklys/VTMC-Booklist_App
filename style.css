@@ -1,0 +1,34 @@
+.stars {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    float: left;
+}
+
+.stars input{
+    display: none;
+}
+
+.fa-star{
+    color: #ccc3c3;
+    transition: all .2s ease;
+}
+
+.stars input:not(:checked) ~ label:hover,
+.stars input:not(:checked) ~ label:hover ~ label{
+    color: #5cb85c;
+}
+
+.stars input:checked ~ label{
+    color: #5cb85c;
+}
+
+.stars input#rate-5:checked ~ label{
+    color: #5cb85c;
+    text-shadow: 0 0 1.5px #952;
+}
+
+.active{
+    color: #5cb85c;
+}
+

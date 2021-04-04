@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/85a9462cb0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>BookList</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <span class="text-success">Book</span>List
+        </h1>
+        <form autocomplete="off" id="book-form">
+            <div class="form-group">
+                <label for="title">Title:</label><br>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label><br>
+                <input type="text" class="form-control" id="author">
+            </div>
+            <div class="form-group">
+                <label for="pagesTotal">Total pages:</label><br>
+                <input type="text" class="form-control" id="pagesTotal">
+            </div>
+            <div class="form-group">
+                <label for="title">Pages already read:</label><br>
+                <input type="text" class="form-control" id="pagesRead">
+            </div>
+            <p class="mb-2">Rating:</p>
+            <div class="stars">
+                <input type="radio" name="rate" id="rate-5">
+                <label for="rate-5" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-4">
+                <label for="rate-4" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-3">
+                <label for="rate-3" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-2">
+                <label for="rate-2" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-1">
+                <label for="rate-1" class="fas fa-star"></label>
+            </div>
+            <input type="submit" value="Submit" id="submit" class="btn btn-success btn-block font-weight-bold">
+        </form>
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Pages left</td>
+                    <td>Rating</td>
+                    <td>Delete</td>
+                    <td>Edit</td>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
